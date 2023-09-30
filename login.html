@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acuelection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    
+    <div class="body_cover">
+        <div class="container">
+
+          <div class="logo_section">
+            <div class="logo_section_cover">
+              <img class="animate" src="./images/Tablet login-rafiki.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="form_section">
+
+            <div class="form_inner">
+              <div class="form_text">
+                <h2>Login</h2>
+                <span id="sign_line"></span>
+              </div>
+              <br />
+              <form action="main.html" method="post">
+
+                
+                <div class="name">
+                  <input type="text" name="matric_number" id="name" required placeholder="Matric Number" />
+                </div>
+                <!-- Main passWord -->
+                <div class="password">
+                  <input type="password" name="password" id="password" required placeholder="Password" />
+                  <span class="eye"><i id="togglePassword" class="fa-regular fa-eye"></i></span>
+                </div>
+                <!-- Main passWord -->
+                <div class="button">
+                  <button id="login" name="loginBtn">Login</button>
+
+                </div>
+
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <script src="./script.js"></script>
+
+</body>
+</html>
