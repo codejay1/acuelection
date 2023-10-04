@@ -9,6 +9,9 @@
 
 :root{
   --main-color: #6c63ff;
+  --text-color: #fff;
+  --names: #091844; 
+  --post: #DB4437;
 }
 
 .body{
@@ -33,8 +36,9 @@
 }
 .container{
   flex-basis: 65%;
-  height: 90vh;
-  padding: 10px;
+  /* height: 90vh; */
+  padding: 20px;
+  border-radius: 10px;
   background: #fff;
   box-shadow: 0px 1px 16.83px 0.17px rgba(0, 0, 0, 0.096);
   display: grid;
@@ -122,7 +126,7 @@
 #form_mini_text a{
   margin-left: 5px;
 }
-form{
+#main_form{
   /* border: 1px solid; */
   margin: 10px;
   width: 100%;
@@ -175,16 +179,6 @@ form #name,#password,#confirmpassword,#email{
   /* padding: 2px; */
 }
 
-form label{
-  position: absolute;
-  left: 0px;
-  pointer-events: none;
-  bottom: 0px;
-  /* border-bottom: 1px solid #3f3d56; */
-  width: 100%;
-  height: 100%;
-  /* border: 1px solid; */
-}
 
 form .eye{
   /* border: 1px solid green; */
@@ -207,14 +201,14 @@ form .eye{
 
 
 .button{
-  /* border: 1px solid; */
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   place-content: center;
+  align-items: center;
   /* justify-content: space-between; */
   /* align-items: center; */
-  margin: 25px;
+  /* margin: 25px; */
 }
 .button button, .button a{
   padding: 15px 26px;
@@ -296,30 +290,137 @@ button:hover{
 
 
 
-@media(max-width: 1025px){
-  .container{
-    flex-basis: 95%;
+
+
+/* Main Page */
+.main_page{
+  /* border: 1px solid; */
 }
+.banner{
+  /* border: 1px solid red; */
+  background: var(--main-color);
+  display: grid;
+  padding: 50px;
+  place-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+.banner_text{
+  padding: 10px;
 }
 
-@media (max-width: 990px){
-  .container{
-      flex-basis: 95%;
-      display: flex;
-  }
-  .logo_section{
-      display: none;
-  }
-  .form_section{
-      flex-basis: 100%;
-    }
-    .form_inner{
-      padding: 0px;
-    }
-    
-    
+.banner h1{
+  font-size: 50px;
+}
+.banner p{
+  font-size: 15px;
 }
 
-.animate{
-    animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;
-    animation-delay: 0s;}svg#freepik_stories-sign-up.animated #freepik--Floor--inject-27 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0s;}svg#freepik_stories-sign-up.animated #freepik--Device--inject-27 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;}svg#freepik_stories-sign-up.animated #freepik--Lines--inject-27 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedLeft;animation-delay: 0s;}svg#freepik_stories-sign-up.animated #freepik--Character--inject-27 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-sign-up.animated #freepik--Plant--inject-27 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0s;}            @keyframes zoomOut {                0% {                    opacity: 0;                    transform: scale(1.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }                    @keyframes slideUp {                0% {                    opacity: 0;                    transform: translateY(30px);                }                100% {                    opacity: 1;                    transform: inherit;                }            }                    @keyframes lightSpeedLeft {              from {                transform: translate3d(-50%, 0, 0) skewX(20deg);                opacity: 0;              }              60% {                transform: skewX(-10deg);                opacity: 1;              }              80% {                transform: skewX(2deg);              }              to {                opacity: 1;                transform: translate3d(0, 0, 0);              }            }                    @keyframes slideRight {                0% {                    opacity: 0;                    transform: translateX(30px);                }                100% {                    opacity: 1;                    transform: translateX(0);                }            }        
+
+.candidates{
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+.candidate_post{
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.candidate_post p{
+  font-size: 22px;
+  font-weight: 500;
+}
+.candidate_post span{
+  position: relative;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+  border-radius: 50px;
+  background: var(--main-color);
+}
+
+.candidates_info{
+  /* border: 1px solid green; */
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.candids{
+  backdrop-filter: blur(5.1px);
+  box-shadow: 0px 3px 39px -1px rgba(245, 245, 245, 0.822);
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+}
+.avatar{
+  margin-top: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  overflow: hidden;
+}
+.avatar img{
+  width: 100%;
+}
+
+
+
+.candid_text{
+  /* border: 1px solid; */
+  text-align: center;
+  padding: 10px;
+}
+
+#names{
+  color: var(--names);
+  font-weight: 600;
+  font-size: 25px;
+}
+#post{
+  color: var(--post);
+}
+
+.candid_text input{
+  display: none;
+}
+.candid_text label{
+    display: grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: 1px solid;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    position: relative;
+
+}
+
+.candid_text label::before{
+  content: "✔";
+  background: var(--post);
+  position: absolute;
+  width: 100%;
+  border-radius: 50px;
+  height: 100%;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  place-content: center;
+  opacity: 0;
+}
+
+.candid_text input:checked + label::before{
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  color: #fff;
+}
